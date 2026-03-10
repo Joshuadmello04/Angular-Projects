@@ -1,0 +1,25 @@
+<h1>Directive Demo</h1>
+<hr>
+<h2>Attribute Directive</h2>
+<hr>
+<!-- ng class -->
+<div [ngClass]="{bg:true, brdr:false}">Just for demo</div>
+<div [ngClass]="{bg:false, brdr:true}">Just for demo</div>
+<div [ngClass]="{bg:true, brdr:true}">Just for demo</div>
+<hr>
+<!-- ng style -->
+ <div [ngStyle]="{'background-color':'green'}">Just for Demo</div>
+ <hr>
+ <!-- Structural Directive -->
+<h2>Structural Directives</h2>
+<h4 (click)="show()">Login Show/Hide</h4>
+<span *ngIf="switch"> 
+  <login></login>
+</span>
+<span [ngSwitch]="ch"> 
+  <p *ngSwitchCase="1">Good Morning</p>
+  <p *ngSwitchCase="2">Good Afternoon</p>
+  <p *ngSwitchCase="3">Good Evening</p>
+  <p *ngSwitchCase="4">Good Night</p>
+  <p *ngSwitchDefault>Good Day</p>
+</span>

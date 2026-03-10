@@ -1,0 +1,30 @@
+<h2>Inbuilt Pipes</h2>
+<h3>
+    {{ d1 }} <br>
+    {{d1 | date }} <br>
+    {{ d1 | date : 'dd/MM/yyyy'}} <br>
+    {{ d1 | date : 'hh:mm:ss'}} <br>
+    {{d1 | date : 'fullDate'}}
+</h3>
+<br>
+<h3>
+    {{amount}} <br>
+    {{amount | currency}} <br>
+    {{amount | currency : 'INR'}} <br>
+    {{amount | currency : 'EUR'}} <br>
+    {{amount | currency : 'JPY'}} <br>
+    {{amount | currency : 'SAR'}} <br>
+</h3>
+
+<h3>
+    {{str}} <br>
+    {{str | uppercase}} <br>
+    {{str | lowercase}} <br>
+    {{str | slice : 5}}
+    {{str | slice : 5 : 11}} <br>
+</h3>
+
+<h3>
+    {{emp}}<!--  This will display obj obj -->
+    {{emp | json}}
+</h3>

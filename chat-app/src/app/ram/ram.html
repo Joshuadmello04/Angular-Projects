@@ -1,0 +1,8 @@
+<h2>Ram</h2>
+<h3>
+    <input #m1 placeholder="Type message here">
+    <button (click)="sendMessage(m1.value)">Send Message</button>
+</h3>
+<br>
+<!-- Now we wanna traverse a loop to display msgs string -->
+<h4 *ngFor="let msg of cs.messages">{{msg}}</h4>

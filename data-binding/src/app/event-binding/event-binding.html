@@ -1,0 +1,9 @@
+<h2>Event Binding</h2>
+<br>
+
+Enter first name : <input #mi1 (change)="justFindLength(mi1.value)"><span>{{ length }}</span><br><br>
+Enter last name : <input #mi2><br><br>
+
+<input type="button" (click)="fullName(mi1.value, mi2.value)" value="GREET">
+
+<h3>{{name}}</h3>
