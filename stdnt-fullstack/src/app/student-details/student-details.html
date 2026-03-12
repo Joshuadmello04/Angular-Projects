@@ -1,0 +1,15 @@
+<div *ngIf="student; else loading">
+  <h2>Student Details</h2>
+
+  <p>RegNo: {{student.regNo}}</p>
+  <p>Name : {{student.name}}</p>
+  <p>School : {{student.school}}</p>
+  <p>Std : {{student.standard}}</p>
+  <p>Gender : {{student.gender}}</p>
+  <p>Result : {{student.result}}</p>
+</div>
+
+<ng-template #loading>
+  <p>Loading student...</p>
+</ng-template>
+<button class="view-btn" routerLink="/students">Back</button>

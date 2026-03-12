@@ -1,0 +1,27 @@
+<h2>Edit Student</h2>
+
+Roll No
+<input type="number" name="rollNo" [(ngModel)]="student.rollNo">
+<br><br>
+
+Name
+<input type="text" name="name" [(ngModel)]="student.name">
+<br><br>
+
+School
+<input type="text" name="school" [(ngModel)]="student.school">
+<br><br>
+
+Standard
+<input type="number" name="standard" [(ngModel)]="student.standard">
+<br><br>
+
+Gender
+<input type="text" name="gender" [(ngModel)]="student.gender">
+<br><br>
+
+Percentage
+<input type="number" name="percentage" [(ngModel)]="student.percentage">
+<br><br>
+
+<button (click)="update()">Update Student</button>

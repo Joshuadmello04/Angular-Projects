@@ -1,0 +1,15 @@
+<h2>Results</h2>
+
+<button (click)="getResult(true)">Pass Students</button>
+<button (click)="getResult(false)">Fail Students</button>
+
+<ul *ngIf="students.length > 0; else noData">
+  <li *ngFor="let s of students">
+    {{s.name}} - {{s.school}}
+  </li>
+</ul>
+
+<ng-template #noData>
+  <p>No students found</p>
+</ng-template>
+<button class="view-btn" routerLink="/">Back</button>

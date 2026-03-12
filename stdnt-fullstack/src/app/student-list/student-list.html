@@ -1,0 +1,32 @@
+<h2>Student List</h2>
+<!-- <pre>{{students | json}}</pre> -->
+<table border="1">
+  <thead>
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>School</th>
+      <th>Std</th>
+      <th>Gender</th>
+      <th>Percentage</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let s of students">
+      <td>{{s.rollNo}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.school}}</td>
+      <td>{{s.standard}}</td>
+      <td>{{s.gender}}</td>
+      <td>{{s.percentage}}</td>
+      <td>
+       <button class="delete-btn" (click)="deleteStudent(s.regNo)">Delete</button>
+        <button class="view-btn" [routerLink]="['/details', s.regNo]">View</button>
+        <button class="edit-btn" [routerLink]="['/edit', s.regNo]">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="view-btn" routerLink="/">Back</button>

@@ -1,0 +1,19 @@
+<h2>Student Strength</h2>
+
+Gender
+<input type="text" [(ngModel)]="gender">
+
+<br><br>
+
+Standard
+<input type="number" [(ngModel)]="std">
+
+<br><br>
+
+<button class="view-btn" (click)="check()">Check Strength</button>
+
+<br><br>
+
+<div *ngIf="count !== undefined">
+  Total Students: {{count}}
+</div>
