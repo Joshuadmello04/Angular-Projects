@@ -14,13 +14,22 @@ import { StudentResult } from './student-result/student-result';
 import { StudentStrength } from './student-strength/student-strength';
 import { CommonModule } from '@angular/common';
 import { StudentEdit } from './student-edit/student-edit';
+import { StudentBySchool } from './student-by-school/student-by-school';
+import { Login } from './login/login';
 
 @NgModule({
   declarations: [
-    App,Welcome,Dashboard,
-    StudentList,StudentForm,StudentDetails,
-    StudentResult,StudentStrength,
-    StudentEdit
+    App,
+    Welcome,
+    Dashboard,
+    StudentList,
+    StudentForm,
+    StudentDetails,
+    StudentResult,
+    StudentStrength,
+    StudentEdit,
+    StudentBySchool,
+    Login,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, CommonModule],
   providers: [provideBrowserGlobalErrorListeners()],

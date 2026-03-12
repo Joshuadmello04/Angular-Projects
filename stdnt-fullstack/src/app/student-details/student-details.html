@@ -1,15 +1,38 @@
-<div *ngIf="student; else loading">
-  <h2>Student Details</h2>
+<div class="details-container">
 
-  <p>RegNo: {{student.regNo}}</p>
-  <p>Name : {{student.name}}</p>
-  <p>School : {{student.school}}</p>
-  <p>Std : {{student.standard}}</p>
-  <p>Gender : {{student.gender}}</p>
-  <p>Result : {{student.result}}</p>
+  <div *ngIf="student; else loading" class="student-card">
+    <h2>Student Details</h2>
+
+    <div class="detail-row">
+      <span class="label">Reg No:</span>
+      <span>{{student.regNo}}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Name:</span>
+      <span>{{student.name}}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">School:</span>
+      <span>{{student.school}}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Standard:</span>
+      <span>{{student.standard}}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Gender:</span>
+      <span>{{student.gender}}</span>
+    </div>
+    <div class="detail-row">
+      <span class="label">Result:</span>
+      <span>{{student.result}}</span>
+    </div>
+    <button class="back-btn" routerLink="/students">Back</button>
+
+  </div>
+
 </div>
 
 <ng-template #loading>
-  <p>Loading student...</p>
+  <p class="loading">Loading student...</p>
 </ng-template>
-<button class="view-btn" routerLink="/students">Back</button>

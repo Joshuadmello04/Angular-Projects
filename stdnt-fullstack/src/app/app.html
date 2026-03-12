@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<nav class="navbar">
+
+  <div class="logo">
+    StudentMS
+  </div>
+
+  <div class="nav-links">
+    <a routerLink="/">Dashboard</a>
+    <a routerLink="/students">Students</a>
+    <a routerLink="/add">Add Student</a>
+    <a routerLink="/result">Results</a>
+    <a routerLink="/strength">Strength</a>
+    <a routerLink="/school">School Stats</a>
+  </div>
+
+</nav>
+
+<div class="page">
+  <router-outlet></router-outlet>
+</div>

@@ -42,4 +42,20 @@ export class StudentService {
   {
     return this.hc.get<number>(this.url+"/strength?gender="+gender+"&std="+std);
   }
+
+  getStudentsBySchool(name:string)
+  {
+    return this.hc.get<Student[]>(this.url + "/school?name=" + name);
+  }
+
+  getCountBySchool(name:string)
+  {
+    return this.hc.get<number>(this.url + "/school/count?name=" + name);
+  }
+
+  getCountBySchoolStd(school:string,std:number)
+  {
+    return this.hc.get<number>(this.url +
+      "/school/standard/count?school=" + school + "&std=" + std);
+  }
 }

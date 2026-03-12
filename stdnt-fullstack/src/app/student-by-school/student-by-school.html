@@ -1,0 +1,41 @@
+<div class="school-container">
+
+  <h1>School Statistics</h1>
+  <div class="cards">
+    <!-- Students By School -->
+    <div class="card">
+      <h2>Students By School</h2>
+      <label>School Name</label>
+      <input type="text" [(ngModel)]="school1">
+      <button (click)="search()">Fetch Students</button>
+      <ul>
+        <li *ngFor="let s of students">
+          {{s.name}} - Standard {{s.standard}}
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- Count by School -->
+    <div class="card">
+      <h2>Student Count by School</h2>
+      <label>School Name</label>
+      <input type="text" [(ngModel)]="school2">
+      <button (click)="check()">Check Count</button>
+      <p class="result">Total Students: {{countSchool}}</p>
+    </div>
+
+    <!-- Count by School + Standard -->
+    <div class="card">
+      <h2>School + Standard Count</h2>
+      <label>School</label>
+      <input type="text" [(ngModel)]="school3">
+      <label>Standard</label>
+      <input type="number" [(ngModel)]="std">
+      <button (click)="check2()">Check</button>
+      <p class="result">Total Students: {{countSchoolStd}}</p>
+    </div>
+  </div>
+
+  <button class="back-btn" routerLink="/">Back</button>
+</div>

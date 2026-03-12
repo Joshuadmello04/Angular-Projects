@@ -8,11 +8,18 @@ import { StudentDetails } from './student-details/student-details';
 import { StudentResult } from './student-result/student-result';
 import { StudentStrength } from './student-strength/student-strength';
 import { StudentEdit } from './student-edit/student-edit';
+import { StudentBySchool } from './student-by-school/student-by-school';
+import { authGuard } from './auth-guard';
+import { Login } from './login/login';
 
 const routes: Routes = [
   {
     path: '',
-    component: Dashboard
+    component: Dashboard,
+  },
+  {
+    path:'login',
+    component:Login
   },
   {
     path: 'students',
@@ -20,11 +27,13 @@ const routes: Routes = [
   },
   {
     path: 'add',
-    component: StudentForm
+    component: StudentForm,
+    canActivate:[authGuard]
   },
   {
     path: 'edit/:reg',
-    component: StudentEdit   // ✅ keep this one
+    component: StudentEdit,   // ✅ keep this one
+    canActivate:[authGuard]
   },
   {
     path: 'details/:reg',
@@ -37,6 +46,10 @@ const routes: Routes = [
   {
     path: 'strength',
     component: StudentStrength
+  },
+  {
+    path: 'school',
+    component: StudentBySchool
   }
 ];
 

@@ -25,7 +25,7 @@ export class StudentDetails {
 
       this.ss.getStudent(reg).subscribe(data => {
         console.log("Student received:", data);
-        this.student = data;
+        this.student = data;  
         this.cd.detectChanges();   // 👈 force UI refresh
       });
     });
